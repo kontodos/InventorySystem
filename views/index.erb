@@ -13,21 +13,16 @@
 		</tr>
 		
 
-		<%# grocery_list.each do |item| %>
-		<% @array.each do |item| %>
-		<tr>
-			<td><%= puts item %></td>
-			
-			<% if false %>
-		<tr>
+		<% @grocerylist.each do |item| %>
 
+		<tr>
 			<td><%= item.name %></td>
 			<td><%= item.quantity %></td>
 			<td><%= item.price %></td>
 			<td><%= item.total %></td>
 		</tr>
 		<% end %>
-		<% end %>
+		
 	</table>
 	
 	

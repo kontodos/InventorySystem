@@ -2,9 +2,9 @@ require 'sinatra'
 require './grocery_item'
 
 grocery_list = []
-@array = ['cat', 'dog', 'snake'] 
 
 get '/' do
+	@grocerylist = grocery_list
 	erb :index
 end
 
@@ -13,8 +13,8 @@ get '/new' do
 end
 
 post '/save' do
-	
-	#@item = GroceryItem.new params[:name], params[:quantity], params[:price] 
-	#grocery_list << @item
+	item = GroceryItem.new params[:name], params[:quantity], params[:price] 
+	grocery_list << item
+	@grocerylist = grocery_list
 	erb :index
 end
